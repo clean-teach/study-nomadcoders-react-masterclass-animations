@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { motion, useMotionValue, useTransform, useScroll } from 'framer-motion';
 import { useEffect } from 'react';
 
 const Box = styled(motion.div)`
@@ -12,19 +12,45 @@ const Box = styled(motion.div)`
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  color: #df5660;
 `;
 
 function MotionValues() {
   const y = useMotionValue(0);
   const transValue = useTransform(y, [-400, 0, 400], [2, 1, 0.1]);
-  useEffect(() => {
-    return y.onChange(() => console.log(y.get()));
-  }, [y]);
+  const rotateZ = useTransform(y, [-800, 800], [-360, 360]);
+  const gradient = useTransform(
+    y,
+    [-800, 800],
+    [
+      'linear-gradient(135deg, rgb(0, 210, 238), rgb(0, 83, 238))',
+      'linear-gradient(135deg, rgb(0, 238, 155), rgb(238, 178, 0))',
+    ],
+  );
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 5]);
+  //   useEffect(() => {
+  //     return y.onChange(() => console.log(y.get()));
+  //   }, [y]);
   return (
     <>
-      <button onClick={() => y.set(200)}>click</button>
-      <Box style={{ y, scale: transValue }} drag="y" dragSnapToOrigin>
-        Motion Value
+      <motion.button
+        onClick={() => y.set(200)}
+        style={{
+          background: gradient,
+          width: '100px',
+          height: '100px',
+          scale,
+          position: 'fixed',
+          transformOrigin: 'top left',
+          top: 0,
+          left: 0,
+        }}
+      >
+        click
+      </motion.button>
+      <Box style={{ y, scale: transValue, rotateZ }} drag="y" dragSnapToOrigin>
+        {`Motion Value ${y.get()}`}
       </Box>
     </>
   );

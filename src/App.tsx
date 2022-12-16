@@ -7,7 +7,7 @@ import Variants from './components/Variants';
 
 const Wrapper = styled.div`
   display: flex;
-  height: 100vh;
+  height: 200vh;
   width: 100vw;
   justify-content: center;
   align-items: center;
