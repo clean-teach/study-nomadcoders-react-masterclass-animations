@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import AnimatePresece from './components/AnimatePresece';
 import BasicAnimations from './components/BasicAnimations';
 import Drag from './components/Drag';
 import Gestures from './components/Gestures';
@@ -27,6 +28,7 @@ function App() {
       <Drag />
       <MotionValues />
       <SVGAnimation />
+      <AnimatePresece />
     </Wrapper>
   );
 }
