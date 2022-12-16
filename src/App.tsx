@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BasicAnimations from './components/BasicAnimations';
+import Variants from './components/Variants';
 
 const Wrapper = styled.div`
   display: flex;
@@ -7,12 +8,16 @@ const Wrapper = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
+  & > * {
+    margin: 1rem;
+  }
 `;
 
 function App() {
   return (
     <Wrapper>
       <BasicAnimations />
+      <Variants />
     </Wrapper>
   );
 }
