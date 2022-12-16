@@ -3,6 +3,7 @@ import BasicAnimations from './components/BasicAnimations';
 import Drag from './components/Drag';
 import Gestures from './components/Gestures';
 import MotionValues from './components/MotionValues';
+import SVGAnimation from './components/SVGAnimation';
 import Variants from './components/Variants';
 
 const Wrapper = styled.div`
@@ -25,6 +26,7 @@ function App() {
       <Gestures />
       <Drag />
       <MotionValues />
+      <SVGAnimation />
     </Wrapper>
   );
 }
