@@ -7,6 +7,10 @@ const Box = styled(motion.div)`
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 `;
 
 const boxVariants = {
@@ -23,7 +27,9 @@ function Gestures() {
       whileTap="click"
       whileDrag="drag"
       drag
-    />
+    >
+      Gestures
+    </Box>
   );
 }
 

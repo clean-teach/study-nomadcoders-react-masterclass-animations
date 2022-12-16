@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BasicAnimations from './components/BasicAnimations';
+import Drag from './components/Drag';
 import Gestures from './components/Gestures';
 import Variants from './components/Variants';
 
@@ -9,6 +10,7 @@ const Wrapper = styled.div`
   width: 100vw;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   & > * {
     margin: 1rem;
   }
@@ -20,6 +22,7 @@ function App() {
       <BasicAnimations />
       <Variants />
       <Gestures />
+      <Drag />
     </Wrapper>
   );
 }
