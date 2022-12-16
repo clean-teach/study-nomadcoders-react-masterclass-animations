@@ -6,6 +6,7 @@ import Gestures from './components/Gestures';
 import Layout from './components/Layout';
 import LayoutId from './components/LayoutId';
 import MotionValues from './components/MotionValues';
+import ShareLayoutCard from './components/ShareLayoutCard';
 import Slider from './components/Slider';
 import SVGAnimation from './components/SVGAnimation';
 import Variants from './components/Variants';
@@ -40,6 +41,7 @@ function App() {
       <Slider />
       <Layout />
       <LayoutId />
+      <ShareLayoutCard />
     </Wrapper>
   );
 }
