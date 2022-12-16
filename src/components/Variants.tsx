@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const Container = styled.div`
+  position: relative;
+  width: 50%;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
@@ -48,12 +58,15 @@ const circleVariants = {
 
 function Variants() {
   return (
-    <Box variants={boxVariants} initial="start" animate="end">
-      <Circle variants={circleVariants} />
-      <Circle variants={circleVariants} />
-      <Circle variants={circleVariants} />
-      <Circle variants={circleVariants} />
-    </Box>
+    <Container>
+      <h2>Variants</h2>
+      <Box variants={boxVariants} initial="start" animate="end">
+        <Circle variants={circleVariants} />
+        <Circle variants={circleVariants} />
+        <Circle variants={circleVariants} />
+        <Circle variants={circleVariants} />
+      </Box>
+    </Container>
   );
 }
 

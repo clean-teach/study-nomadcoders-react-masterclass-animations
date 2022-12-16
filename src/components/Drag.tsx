@@ -2,6 +2,16 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 
+const Container = styled.div`
+  position: relative;
+  width: 50%;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
@@ -28,16 +38,19 @@ const BiggerBox = styled.div`
 function Drag() {
   const biggerBoxRef = useRef<HTMLDivElement>(null);
   return (
-    <BiggerBox ref={biggerBoxRef}>
-      <Box
-        drag
-        dragSnapToOrigin
-        dragElastic={0.5}
-        dragConstraints={biggerBoxRef}
-      >
-        Drag
-      </Box>
-    </BiggerBox>
+    <Container>
+      <h2>Drag</h2>
+      <BiggerBox ref={biggerBoxRef}>
+        <Box
+          drag
+          dragSnapToOrigin
+          dragElastic={0.5}
+          dragConstraints={biggerBoxRef}
+        >
+          Drag
+        </Box>
+      </BiggerBox>
+    </Container>
   );
 }
 

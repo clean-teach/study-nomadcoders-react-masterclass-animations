@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const Container = styled.div`
+  position: relative;
+  width: 50%;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 const Svg = styled.svg`
   width: 500px;
   height: 500px;
@@ -20,7 +30,8 @@ const svg = {
 
 function SVGAnimation() {
   return (
-    <>
+    <Container>
+      <h2>SVG Animation</h2>
       <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560">
         <motion.path
           variants={svg}
@@ -41,7 +52,7 @@ function SVGAnimation() {
           C677.094,500.719,751.25,396.922,751.25,275.625C751.25,123.922,628.203,8.75,476.5,8.75z"
         />
       </Svg>
-    </>
+    </Container>
   );
 }
 

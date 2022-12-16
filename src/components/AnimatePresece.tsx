@@ -5,7 +5,7 @@ import { useState } from 'react';
 const Container = styled.div`
   position: relative;
   width: 200;
-  margin: 10vh auto;
+  margin: auto;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -46,6 +46,7 @@ function AnimatePresece() {
 
   return (
     <Container>
+      <h2>Animate Presece</h2>
       <button onClick={toggleShowing}>Click</button>
       <AnimatePresence>
         {showing ? (

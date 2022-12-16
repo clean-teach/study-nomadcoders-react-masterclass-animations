@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 const Container = styled.div`
   position: relative;
-  width: 200px;
-  margin: 10vh auto;
+  width: 50%;
+  margin: auto;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -63,6 +63,7 @@ function Slider() {
 
   return (
     <Container>
+      <h2>Slider</h2>
       <AnimatePresence custom={isBack} mode="wait">
         <Box
           variants={box}

@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+const Container = styled.div`
+  position: relative;
+  width: 50%;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
@@ -21,15 +31,18 @@ const boxVariants = {
 
 function Gestures() {
   return (
-    <Box
-      variants={boxVariants}
-      whileHover="hover"
-      whileTap="click"
-      whileDrag="drag"
-      drag
-    >
-      Gestures
-    </Box>
+    <Container>
+      <h2>Gestures</h2>
+      <Box
+        variants={boxVariants}
+        whileHover="hover"
+        whileTap="click"
+        whileDrag="drag"
+        drag
+      >
+        Gestures
+      </Box>
+    </Container>
   );
 }
 

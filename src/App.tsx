@@ -18,6 +18,11 @@ const Wrapper = styled.div`
   & > * {
     margin: 1rem;
   }
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
 `;
 
 function App() {

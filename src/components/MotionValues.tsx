@@ -2,6 +2,16 @@ import styled from 'styled-components';
 import { motion, useMotionValue, useTransform, useScroll } from 'framer-motion';
 import { useEffect } from 'react';
 
+const Container = styled.div`
+  position: relative;
+  width: 50%;
+  margin: auto;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 const Box = styled(motion.div)`
   width: 200px;
   height: 200px;
@@ -33,7 +43,8 @@ function MotionValues() {
   //     return y.onChange(() => console.log(y.get()));
   //   }, [y]);
   return (
-    <>
+    <Container>
+      <h2>Motion Values</h2>
       <motion.button
         onClick={() => y.set(200)}
         style={{
@@ -41,7 +52,7 @@ function MotionValues() {
           width: '100px',
           height: '100px',
           scale,
-          position: 'fixed',
+          position: 'absolute',
           transformOrigin: 'top left',
           top: 0,
           left: 0,
@@ -52,7 +63,7 @@ function MotionValues() {
       <Box style={{ y, scale: transValue, rotateZ }} drag="y" dragSnapToOrigin>
         {`Motion Value ${y.get()}`}
       </Box>
-    </>
+    </Container>
   );
 }
 
