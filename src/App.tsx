@@ -4,6 +4,7 @@ import BasicAnimations from './components/BasicAnimations';
 import Drag from './components/Drag';
 import Gestures from './components/Gestures';
 import MotionValues from './components/MotionValues';
+import Slider from './components/Slider';
 import SVGAnimation from './components/SVGAnimation';
 import Variants from './components/Variants';
 
@@ -29,6 +30,7 @@ function App() {
       <MotionValues />
       <SVGAnimation />
       <AnimatePresece />
+      <Slider />
     </Wrapper>
   );
 }
