@@ -3,6 +3,8 @@ import AnimatePresece from './components/AnimatePresece';
 import BasicAnimations from './components/BasicAnimations';
 import Drag from './components/Drag';
 import Gestures from './components/Gestures';
+import Layout from './components/Layout';
+import LayoutId from './components/LayoutId';
 import MotionValues from './components/MotionValues';
 import Slider from './components/Slider';
 import SVGAnimation from './components/SVGAnimation';
@@ -36,6 +38,8 @@ function App() {
       <SVGAnimation />
       <AnimatePresece />
       <Slider />
+      <Layout />
+      <LayoutId />
     </Wrapper>
   );
 }
