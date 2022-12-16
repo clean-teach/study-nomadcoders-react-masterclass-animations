@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { motion, useMotionValue } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useEffect } from 'react';
 
 const Box = styled(motion.div)`
@@ -16,13 +16,16 @@ const Box = styled(motion.div)`
 
 function MotionValues() {
   const y = useMotionValue(0);
+  const transValue = useTransform(y, [-400, 0, 400], [2, 1, 0.1]);
   useEffect(() => {
     return y.onChange(() => console.log(y.get()));
   }, [y]);
   return (
     <>
       <button onClick={() => y.set(200)}>click</button>
-      <Box style={{ y }} drag="y" dragSnapToOrigin></Box>
+      <Box style={{ y, scale: transValue }} drag="y" dragSnapToOrigin>
+        Motion Value
+      </Box>
     </>
   );
 }
