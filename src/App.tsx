@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import BasicAnimations from './components/BasicAnimations';
+import Gestures from './components/Gestures';
 import Variants from './components/Variants';
 
 const Wrapper = styled.div`
@@ -18,6 +19,7 @@ function App() {
     <Wrapper>
       <BasicAnimations />
       <Variants />
+      <Gestures />
     </Wrapper>
   );
 }
